@@ -1,0 +1,18 @@
+[project]
+name = "task-board-lab12"
+version = "0.1.0"
+description = "Лабораторная 12 — Trello-клон (вариант 8)"
+readme = "README.md"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.coverage.run]
+branch = true
+source = ["taskboard"]
+
+[tool.coverage.report]
+omit = ["*/tests/*"]
