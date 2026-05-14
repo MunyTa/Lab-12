@@ -110,7 +110,7 @@ def test_admin_requires_flag() -> None:
     assert r.status_code == 403
 
 
-def test_admin_list_after_promotion(monkeypatch: pytest.MonkeyPatch) -> None:
+def test_admin_list_after_promotion() -> None:
     from taskboard.database import SessionLocal
 
     _register()
