@@ -14,6 +14,11 @@ def test_board_title_empty() -> None:
         BoardCreate(title="")
 
 
+def test_board_title_stripped() -> None:
+    b = BoardCreate(title="  Sprint  ")
+    assert b.title == "Sprint"
+
+
 def test_card_title_ok() -> None:
     c = CardCreate(title="OK")
     assert c.title == "OK"
